@@ -9,7 +9,7 @@ module.exports = {
     path.resolve('src/index.tsx'),
   ],
   resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
+    extensions: ['.js', '.ts', '.tsx', '.css'],
   },
   devServer: {
     historyApiFallback: true,
@@ -25,7 +25,11 @@ module.exports = {
       {
         test: /\.tsx?/,
         loader: 'ts-loader'
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [

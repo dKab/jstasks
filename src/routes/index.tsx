@@ -5,9 +5,11 @@ import Hello from '../components/Hello'
 import Counter from '../components/Counter'
 import NoMatch from '../components/NoMatch'
 import NavBar from '../components/NavBar'
+import { Header } from '../components/Header/Header'
 
 const routes = (
   <div>
+    <Header />
     <NavBar />
     <Switch>
       <Route exact path="/" component={Home} />
