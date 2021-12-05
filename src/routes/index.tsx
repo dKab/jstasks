@@ -1,10 +1,9 @@
 import React from 'react'
-import { Route, Switch } from 'react-router'
-import Home from '../components/Home'
-import Hello from '../components/Hello'
+import { Redirect, Route, Switch } from 'react-router'
+import Task from '../components/Task'
 import Counter from '../components/Counter'
 import NoMatch from '../components/NoMatch'
-import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar/NavBar'
 import { Header } from '../components/Header/Header'
 
 const routes = (
@@ -12,8 +11,10 @@ const routes = (
     <Header />
     <NavBar />
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/hello" component={Hello} />
+      <Route exact path="/">
+        <Redirect to="/tasks/1" />
+      </Route>
+      <Route path="/tasks/:id" component={Task} />
       <Route path="/counter" component={Counter} />
       <Route component={NoMatch} />
     </Switch>
