@@ -2,8 +2,14 @@ import { createBrowserHistory } from 'history'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { routerMiddleware } from 'connected-react-router'
 import createRootReducer from './reducers'
+import createSagaMiddleware from 'redux-saga'
 
 export const history = createBrowserHistory()
+
+import checkUserInputSaga from './sagas/check-user-input'
+
+const sagaMiddleware = createSagaMiddleware()
+
 
 export default function configureStore(preloadedState?: any) {
   const composeEnhancer: typeof compose = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -13,9 +19,12 @@ export default function configureStore(preloadedState?: any) {
     composeEnhancer(
       applyMiddleware(
         routerMiddleware(history),
+        sagaMiddleware
       ),
     ),
-  )
+  );
+
+  sagaMiddleware.run(checkUserInputSaga)
 
   // Hot reloading
   if (module.hot) {
