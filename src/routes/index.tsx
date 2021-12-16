@@ -10,7 +10,7 @@ const routes = (
     <Header />
     <NavBar />
     <Switch>
-      <Route exact path="/">
+      <Route exact path="/jstasks/">
         <Redirect to="/jstasks/tasks/1" />
       </Route>
       <Route path="/jstasks/tasks/:id" component={Task} />

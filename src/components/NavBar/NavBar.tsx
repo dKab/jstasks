@@ -8,16 +8,16 @@ const NavBar = () => (
       {
       // Todo : autogenerate links
       }
-      <li><Link to="/tasks/1">1</Link></li>
-      <li><Link to="/tasks/2">2</Link></li>
-      <li><Link to="/tasks/3">3</Link></li>
-      <li><Link to="/tasks/4">4</Link></li>
-      <li><Link to="/tasks/5">5</Link></li>
-      <li><Link to="/tasks/6">6</Link></li>
-      <li><Link to="/tasks/7">7</Link></li>
-      <li><Link to="/tasks/8">8</Link></li>
-      <li><Link to="/tasks/9">9</Link></li>
-      <li><Link to="/tasks/10">10</Link></li>
+      <li><Link to="/jstasks/tasks/1">1</Link></li>
+      <li><Link to="/jstasks/tasks/2">2</Link></li>
+      <li><Link to="/jstasks/tasks/3">3</Link></li>
+      <li><Link to="/jstasks/tasks/4">4</Link></li>
+      <li><Link to="/jstasks/tasks/5">5</Link></li>
+      <li><Link to="/jstasks/tasks/6">6</Link></li>
+      <li><Link to="/jstasks/tasks/7">7</Link></li>
+      <li><Link to="/jstasks/tasks/8">8</Link></li>
+      <li><Link to="/jstasks/tasks/9">9</Link></li>
+      <li><Link to="/jstasks/tasks/10">10</Link></li>
     </ul>
   </nav>
 )
